@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-body: #0053a1;
+    --background-app: #4978A4;
+}
+
+body {
+    background-color: var(--background-body);
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0; left: 0;
+    width: 100dvw; height: 150px;
+    background-image: url("../images/background-carros-de-interesse.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-title {
+    padding: 3px 10px;
+    background-color: rgba(43, 42, 42, 0.5);
+    border-radius: 10px;
+}
+
+header h1 {
+    color: white;
+}

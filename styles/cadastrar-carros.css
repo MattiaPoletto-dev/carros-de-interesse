@@ -1,44 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --background-body: #0053a1;
-    --background-app: #4978A4;
-}
-
-body {
-    background-color: var(--background-body);
-    overflow-x: hidden;
-}
-
-header {
-    position: sticky;
-    top: 0; left: 0;
-    width: 100dvw; height: 150px;
-    background: url("images/background-carros-de-interesse.jpg") no-repeat;
-    background-size: cover;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.background-title {
-    padding: 3px 10px;
-    background-color: rgba(82, 79, 79, 0.75);
-    border-radius: 10px;
-}
-
-header h1 {
-    color: white;
-}
-
-/* -------------------------------- */
 #cadastrar-carros {
-    margin: 20px auto;
+    margin: 20px auto 60px;
     padding: 10px;
     width: 90%;
     max-width: 800px;
@@ -56,12 +17,8 @@ header h1 {
     gap: 20px;
 }
 
-hr {
-    margin: 20px 0 10px;
-    height: 2px;
-    border: 1px solid #003e7793;
-}
 
+/* -------------------------------- */
 .informacoes-do-carro {
     display: flex;
     flex-direction: column;
@@ -98,6 +55,8 @@ input {
     gap: 5px;
 }
 
+
+/* -------------------------------- */
 .informacao-pessoal {
     display: flex;
     flex-direction: column;
@@ -124,6 +83,8 @@ input {
     padding: 30px 0 20px;
 }
 
+
+/* -------------------------------- */
 .botao-enviar button {
     padding: 7px 20px;
     border: none;
@@ -132,4 +93,12 @@ input {
     color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+}
+
+
+/* -------------------------------- */
+hr {
+    margin: 20px 0 10px;
+    height: 2px;
+    border: 1px solid #003e7793;
 }

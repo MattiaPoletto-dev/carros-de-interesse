@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-body: #0053a1;
+    --background-app: #4978A4;
+}
+
+body {
+    background-color: var(--background-body);
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0; left: 0;
+    width: 100dvw; height: 150px;
+    background: url("images/background-carros-de-interesse.jpg") no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-title {
+    padding: 3px 10px;
+    background-color: rgba(82, 79, 79, 0.75);
+    border-radius: 10px;
+}
+
+header h1 {
+    color: white;
+}
+
+/* -------------------------------- */
+#cadastrar-carros {
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--background-app);
+}
+
+.informacoes-da-loja {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.informacoes-da-loja div {
+    display: flex;
+    gap: 20px;
+}
+
+hr {
+    margin: 20px 0 10px;
+    height: 2px;
+    border: 1px solid #003e7793;
+}
+
+.informacoes-do-carro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-input-carro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.text-input-carro div {
+   flex: 0 0 40%;
+}
+input {
+    width: 100%;
+}
+
+.input-label-qtd-donos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-menor {
+    width: auto;
+}
+
+.campo-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.informacao-pessoal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-pessoal {
+    display: flex;
+    gap: 5px;
+}
+
+.campo-pessoal label {
+    flex: 0 0 45%;
+}
+
+.campo-pessoal textarea {
+    flex: 1;
+    height: 75px;
+    border-radius: 10px;
+}
+
+.botao-enviar {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.botao-enviar button {
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-body);
+    color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}

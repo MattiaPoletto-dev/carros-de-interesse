@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/cadastrar-carros.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <script src="scripts/localStorage.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,6 +16,8 @@
             <h1>Carros de interesse</h1>
         </div>
     </header>
+
+
     <main id="cadastrar-carros">
         <form action="#">
             <div class="informacoes-da-loja">
@@ -44,7 +47,7 @@
                         <input type="text" name="tipo" id="itipo">
                     </div>
                     <div class="campo">
-                        <label for="itipo">Cor:</label>
+                        <label for="icor">Cor:</label>
                         <br>
                         <input type="text" name="cor" id="icor">
                     </div>
@@ -94,6 +97,11 @@
             <option value="Marca8"></option>
         </datalist>
     </main>
+
+    <div id="lista-carros-cadastrados">
+
+    </div>
+    
     <footer>
         <a href="#">
             <div class="nav">
@@ -111,6 +119,5 @@
             </div>
         </a>
     </footer>
-    
 </body>
 </html>

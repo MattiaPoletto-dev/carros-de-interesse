@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/filtrar-carros.css">
     <script src="scripts/localStorage.js" defer></script>
     <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/filtros.js" defer></script>
 </head>
 <body>
     <header>
@@ -115,12 +116,39 @@
                 <h2>Filtrar carros</h2>
                 <div class="filtrar-carros-title-botoes">
                     <button onclick="localStorageParaHTML()">Mostrar todos</button>
-                    <button>Filtrar <i class="fa-solid fa-angle-down"></i></button>
+                    <button id="btn-abrir-filtros">Filtros <i class="fa-solid fa-angle-down"></i></button>
+                    
                 </div>
             </div>
             <hr>
             <div id="lista-carros-filtrados">
-                
+                <div id="filtros">
+                    <button id="btn-fechar-filtros">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <label>Marca: <input type="text" name="filtro-marca" id="ifiltro-marca"></label>
+                    <label>Modelo: <input type="text" name="filtro-modelo" id="ifiltro-modelo"></label>
+                    <label>Tipo: <input type="text" name="filtro-tipo" id="ifiltro-tipo"></label>
+                    <label>Cor: <input type="text" name="filtro-cor" id="ifiltro-cor"></label>
+                    <label>Quilometragem máxima: <input type="text" name="filtro-km-max" id="ifiltro-km-max"></label>
+                    <label>Preço máximo: <input type="text" name="filtro-preco-max" id="ifiltro-preco-max"></label>
+                    <label>Loja: <input type="text" name="filtro-loja" id="ifiltro-loja"></label>
+                    <div style="margin-top: 10px;">
+                        <div class="radio-inline">
+                            <input type="radio" name="filtro-donos" id="ifiltro-indiferente-donos" checked>
+                            <label for="ifiltro-indiferente-donos">Escolha indiferente</label>
+                        </div>
+                        <div class="radio-inline">
+                            <input type="radio" name="filtro-donos" id="ifiltro-unico-dono">
+                            <label for="ifiltro-unico-dono">Único dono</label>
+                        </div>
+                        <div class="radio-inline">
+                            <input type="radio" name="filtro-donos" id="ifiltro-mais-de-um-dono">
+                            <label for="ifiltro-mais-de-um-dono">Mais de um dono</label>
+                        </div>
+                    </div>
+                    <button>Filtrar</button>
+                </div>
             </div>
         </section>
     </main>

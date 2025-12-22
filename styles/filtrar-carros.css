@@ -54,6 +54,7 @@
 
 /* -------------------------------------- */
 #filtros {
+    z-index: 500;
     overflow: scroll;
     position: fixed;
     top: 30%; left: 5%;

@@ -40,3 +40,48 @@ function adicionarAoLocalStorage(carro) {
   form.reset();
   alert("Carro salvo com sucesso!");
 }
+
+
+/* ------------------------------------------------------ */
+function localStorageParaHTML() {
+    const dados = localStorage.getItem("carros");
+    const carros = dados ? JSON.parse(dados) : [];
+
+    const lista = document.querySelector("#lista-carros-filtrados");
+
+    lista.innerHTML = "";
+    carros.forEach((carro) => {
+        const loja = carro.loja;
+        const marca = carro.marca;
+        const modelo = carro.modelo;
+        const tipo = carro.tipo;
+        const cor = carro.cor;
+        const km = carro.km;
+        const preco = carro.preco;
+        const donos = carro.donos;
+        const opiniao = carro.opiniao;
+
+        // cria o HTML
+        const card = document.createElement("div");
+        card.classList.add("carro");
+
+        card.innerHTML = `
+            <div class="carro-filtrado">
+                <p class="primeiro-parametro"><strong>Modelo:</strong> ${modelo}</p>
+                <div class="carro-filtrado-parametros-iniciais">
+                    <p><strong>Marca:</strong> ${marca}</p>
+                    <p><strong>Tipo:</strong> ${tipo}</p>
+                    <p><strong>Cor:</strong> ${cor}</p>
+                    <p><strong>Preço:</strong> ${preco}</p>
+                </div>
+                <p><strong>Quilometragem:</strong> ${km}</p>
+                <p><strong>Donos:</strong> ${donos}</p>
+                <p><strong>Opinião:</strong> ${opiniao}</p>
+                <p><strong>Loja:</strong> ${loja}</p>
+            </div>
+           `;
+
+        lista.appendChild(card);
+    })
+    
+}

@@ -1,10 +1,53 @@
 #filtrar-carros {
-    display: none;
+    display: block;
     margin: 20px auto 60px;
     padding: 10px;
     width: 90%;
     max-width: 800px;
-    height: 1000px;
-    background-color: white;
+    background-color: var(--background-app);
 }
 
+.filtrar-carros-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtrar-carros-title-botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtrar-carros-title-botoes button{
+    padding: 3px 10px;
+    border: none;
+    background-color: var(--background-body);
+    color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.carro-filtrado {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #78aeff;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+.carro-filtrado-parametros-iniciais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.carro-filtrado p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.primeiro-parametro {
+    text-align: center;
+}

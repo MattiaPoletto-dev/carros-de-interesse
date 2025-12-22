@@ -109,10 +109,22 @@
                 <option value="suv"></option>
             </datalist>
         </section>
-        <section id="filtrar-carros">
 
+        <section id="filtrar-carros">
+            <div class="filtrar-carros-title">
+                <h2>Filtrar carros</h2>
+                <div class="filtrar-carros-title-botoes">
+                    <button onclick="localStorageParaHTML()">Mostrar todos</button>
+                    <button>Filtrar <i class="fa-solid fa-angle-down"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div id="lista-carros-filtrados">
+                
+            </div>
         </section>
     </main>
+
 
     <footer>
         <button onclick="mostrar('cadastrar-carros')">

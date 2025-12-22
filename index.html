@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles/cadastrar-carros.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/filtrar-carros.css">
     <script src="scripts/localStorage.js" defer></script>
+    <script src="scripts/navegacao.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,107 +19,117 @@
         </div>
     </header>
 
+    <main>
+        <section id="cadastrar-carros">
+            <form action="#">
+                <div class="informacoes-da-loja">
+                    <h2>Informações da loja</h2>
+                    <div class="text-input-loja">
+                        <label for="inome-da-loja">Loja:</label>
+                        <input type="text" name="nome-da-loja" id="inome-da-loja" class="input-menor">
+                    </div>
+                </div>
+                <hr>
+                <div class="informacoes-do-carro">
+                    <h2>Informações do carro</h2>
+                    <div class="text-input-carro">
+                        <div class="campo">
+                            <label for="imarca">Marca:</label>
+                            <br>
+                            <input type="text" name="marca" id="imarca" list="marcas" required>
+                        </div>
+                        <div class="campo">
+                            <label for="imodelo">Modelo:</label>
+                            <br>
+                            <input type="text" name="modelo" id="imodelo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="itipo">Tipo:</label>
+                            <br>
+                            <input type="text" name="tipo" id="itipo" list="lista-tipo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="icor">Cor:</label>
+                            <br>
+                            <input type="text" name="cor" id="icor" list="lista-cores" required>
+                        </div>
+                        <div class="campo">
+                            <label for="km-rodados">Km rodados:</label>
+                            <br>
+                            <input type="number" name="km-rodados" id="ikm-rodados" required>
+                        </div>
+                        <div class="campo">
+                            <label for="ipreco">Preço:</label>
+                            <br>
+                            <input type="number" name="preco" id="ipreco" required>
+                        </div>
+                        <div class="campo-radio">
+                            <p><strong>Donos:</strong></p>
+                            <div class="input-label-qtd-donos">
+                                <input type="radio" name="qtd-donos" id="iunico-dono" class="input-menor">
+                                <label for="iunico-dono">Único dono</label>
+                            </div>
+                            <div class="input-label-qtd-donos">
+                                <input type="radio" name="qtd-donos" id="i-mais-de-um-dono" class="input-menor">
+                                <label for="imais-de-um-dono">Mais de um dono</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="informacao-pessoal">
+                    <h2>Informação pessoal</h2>
+                    <div class="campo-pessoal">
+                        <label for="iopiniao-pessoal">Opinião pessoal minha:</label>
+                        <textarea name="opiniao-pessoal" id="iopiniao-pessoal"></textarea>
+                    </div>
+                </div>
+                <div class="botao-enviar">
+                    <button>Enviar</button>
+                </div>
+            </form>
+            <datalist id="marcas">
+                <option value="fiat"></option>
+                <option value="ford"></option>
+                <option value="chevrolet"></option>
+                <option value="honda"></option>
+                <option value="hyundai"></option>
+                <option value="mitsubishi"></option>
+                <option value="renault"></option>
+                <option value="toyota"></option>
+            </datalist>
+            <datalist id="lista-cores">
+                <option value="branco"></option>
+                <option value="preto"></option>
+                <option value="prata"></option>
+            </datalist>
+            <datalist id="lista-tipo">
+                <option value="hatch"></option>
+                <option value="sedã"></option>
+                <option value="suv"></option>
+            </datalist>
+        </section>
+        <section id="filtrar-carros">
 
-    <main id="cadastrar-carros">
-        <form action="#">
-            <div class="informacoes-da-loja">
-                <h2>Informações da loja</h2>
-                <div class="text-input-loja">
-                    <label for="inome-da-loja">Loja:</label>
-                    <input type="text" name="nome-da-loja" id="inome-da-loja" class="input-menor">
-                </div>
-            </div>
-            <hr>
-            <div class="informacoes-do-carro">
-                <h2>Informações do carro</h2>
-                <div class="text-input-carro">
-                    <div class="campo">
-                        <label for="imarca">Marca:</label>
-                        <br>
-                        <input type="text" name="marca" id="imarca" list="marcas">
-                    </div>
-                    <div class="campo">
-                        <label for="imodelo">Modelo:</label>
-                        <br>
-                        <input type="text" name="modelo" id="imodelo">
-                    </div>
-                    <div class="campo">
-                        <label for="itipo">Tipo:</label>
-                        <br>
-                        <input type="text" name="tipo" id="itipo">
-                    </div>
-                    <div class="campo">
-                        <label for="icor">Cor:</label>
-                        <br>
-                        <input type="text" name="cor" id="icor">
-                    </div>
-                    <div class="campo">
-                        <label for="km-rodados">Km rodados:</label>
-                        <br>
-                        <input type="number" name="km-rodados" id="ikm-rodados">
-                    </div>
-                    <div class="campo">
-                        <label for="ipreco">Preço:</label>
-                        <br>
-                        <input type="number" name="preco" id="ipreco">
-                    </div>
-                    <div class="campo-radio">
-                        <p><strong>Donos:</strong></p>
-                        <div class="input-label-qtd-donos">
-                            <input type="radio" name="qtd-donos" id="iunico-dono" class="input-menor">
-                            <label for="iunico-dono">Único dono</label>
-                        </div>
-                        <div class="input-label-qtd-donos">
-                            <input type="radio" name="qtd-donos" id="i-mais-de-um-dono" class="input-menor">
-                            <label for="imais-de-um-dono">Mais de um dono</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="informacao-pessoal">
-                <h2>Informação pessoal</h2>
-                <div class="campo-pessoal">
-                    <label for="iopiniao-pessoal">Opinião pessoal minha:</label>
-                    <textarea name="opiniao-pessoal" id="iopiniao-pessoal"></textarea>
-                </div>
-            </div>
-            <div class="botao-enviar">
-                <button>Enviar</button>
-            </div>
-        </form>
-        <datalist id="marcas">
-            <option value="Marca1"></option>
-            <option value="Marca2"></option>
-            <option value="Marca3"></option>
-            <option value="Marca4"></option>
-            <option value="Marca5"></option>
-            <option value="Marca6"></option>
-            <option value="Marca7"></option>
-            <option value="Marca8"></option>
-        </datalist>
+        </section>
     </main>
 
-    <div id="lista-carros-cadastrados">
-
-    </div>
-    
     <footer>
-        <a href="#">
+        <button onclick="mostrar('cadastrar-carros')">
             <div class="nav">
                 <i class="fa-solid fa-pen-to-square"></i>
             </div>
-        </a>
-        <a href="#">
+        </button>
+        <button onclick="mostrar('filtrar-carros')">
             <div class="nav">
                 <i class="fa-solid fa-car"></i>
             </div>
-        </a>
-        <a href="#">
+        </button>
+        <button>
             <div class="nav">
                 <i class="fa-solid fa-circle-info"></i>
             </div>
-        </a>
+        </button>
     </footer>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/filtrar-carros.css">
+    <link rel="stylesheet" href="styles/crud.css">
     <script src="scripts/localStorage.js" defer></script>
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/filtros.js" defer></script>
@@ -113,6 +114,7 @@
             </datalist>
         </section>
 
+
         <section id="filtrar-carros">
             <div class="filtrar-carros-title">
                 <h2>Filtrar carros</h2>
@@ -149,9 +151,22 @@
                 </div>
                 <button onclick="filtrarCarros()">Filtrar</button>
             </div>
-            <div id="lista-carros-filtrados">
-                
+            <div id="lista-carros-filtrados"></div>
+        </section>
+
+
+        <section id="modificar-informacoes-carros">
+            <div class="modificar-informacoes-carros-titulo">
+                <h2>Modificar informações</h2>
+                <div class="input-lupa">
+                    <input type="text" name="buscar-carro" id="ibuscar-carro" placeholder="nome do carro">
+                    <label for="ibuscar-carro">
+                        <div class="lupa"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </label>
+                </div>
             </div>
+            <hr>
+
         </section>
     </main>
 
@@ -167,7 +182,7 @@
                 <i class="fa-solid fa-car"></i>
             </div>
         </button>
-        <button>
+        <button onclick="mostrar('modificar-informacoes-carros')">
             <div class="nav">
                 <i class="fa-solid fa-circle-info"></i>
             </div>

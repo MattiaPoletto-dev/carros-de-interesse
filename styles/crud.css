@@ -1,0 +1,46 @@
+#modificar-informacoes-carros {
+    display: none;
+    margin: 20px auto 60px;
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    height: 1000px;
+    background-color: var(--background-app);
+}
+
+.modificar-informacoes-carros-titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-lupa {
+    align-self: center;
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.lupa {
+    padding: 0 5px;
+    background-color: lightgray;
+    height: 23px;
+
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.lupa i {
+    transform: translateY(3px);
+}
+
+.modificar-informacoes-carros-titulo input {
+    height: 25px;
+    padding: 0 5px;
+}
+
+.modificar-informacoes-carros-titulo input:focus {
+    border: 2px solid var(--background-body);
+    outline: none;
+}

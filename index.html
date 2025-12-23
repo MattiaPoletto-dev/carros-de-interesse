@@ -119,7 +119,7 @@
             <div class="filtrar-carros-title">
                 <h2>Filtrar carros</h2>
                 <div class="filtrar-carros-title-botoes">
-                    <button onclick="localStorageParaHTML()">Mostrar todos</button>
+                    <button onclick="localStorageParaFiltrarCarros()">Mostrar todos</button>
                     <button id="btn-abrir-filtros" onclick="abrirFecharFiltro()">Filtros <i class="fa-solid fa-angle-down"></i></button>       
                 </div>
             </div>
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <hr>
-
+            <div id="lista-carros-escolhidos"></div>
         </section>
     </main>
 
@@ -182,7 +182,7 @@
                 <i class="fa-solid fa-car"></i>
             </div>
         </button>
-        <button onclick="mostrar('modificar-informacoes-carros')">
+        <button onclick="mostrar('modificar-informacoes-carros'); localStorageParaModificarInformacoes();">
             <div class="nav">
                 <i class="fa-solid fa-circle-info"></i>
             </div>

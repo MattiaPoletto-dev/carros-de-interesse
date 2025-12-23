@@ -101,4 +101,5 @@ function filtrarCarros() {
 
   limparListaCarros();
   renderizarCarros(carrosFiltrados);
+  abrirFecharFiltro();
 }

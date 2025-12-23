@@ -44,3 +44,27 @@
     border: 2px solid var(--background-body);
     outline: none;
 }
+/* -------------------------------------------------------- */
+.carro-filtrado-para-modificar {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #78aeff;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.primeiro-paragrafo-modificacao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.x-para-excluir-carro {
+    background-color: rgb(255, 75, 75);
+    color: white;
+
+    border: 1px solid black;
+}

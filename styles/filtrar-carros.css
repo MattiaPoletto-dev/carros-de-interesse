@@ -18,7 +18,7 @@
     justify-content: space-between;
 }
 
-.filtrar-carros-title-botoes button{
+.filtrar-carros-title-botoes > button{
     padding: 3px 10px;
     border: none;
     background-color: var(--background-body);
@@ -34,13 +34,11 @@
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-
 }
 
 .carro-filtrado-parametros-iniciais {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
 }
 
 .carro-filtrado p {
@@ -54,7 +52,6 @@
 
 /* -------------------------------------- */
 #filtros {
-    z-index: 500;
     overflow: scroll;
     position: fixed;
     top: 30%; left: 5%;
@@ -86,6 +83,10 @@
     width: 20%;
 }
 
-#filtros.ativo {
-    display: flex;
+#filtros {
+  display: none;
+}
+
+#filtros.aberto {
+  display: flex;
 }

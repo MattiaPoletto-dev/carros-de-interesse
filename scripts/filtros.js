@@ -1,11 +1,7 @@
-const btnAbrir = document.querySelector("#btn-abrir-filtros");
-const btnFechar = document.querySelector("#btn-fechar-filtros");
-const filtros = document.querySelector("#filtros");
+function abrirFecharFiltro() {
+  document.getElementById("filtros").classList.toggle("aberto");
+}
 
-btnAbrir.addEventListener("click", () => {
-  filtros.classList.add("ativo");
-});
+function filtrarCarros() {
 
-btnFechar.addEventListener("click", () => {
-  filtros.classList.remove("ativo");
-});
+}

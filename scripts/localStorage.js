@@ -16,8 +16,7 @@ function salvarCarro() {
     km: Number(document.querySelector("#ikm-rodados").value),
     preco: Number(document.querySelector("#ipreco").value),
     donos: document.querySelector("#iunico-dono").checked
-      ? "Único dono"
-      : "Mais de um dono",
+      ? "Único dono" : "Mais de um dono",
     opiniao: document.querySelector("#iopiniao-pessoal").value
   };
 

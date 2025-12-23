@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-body: #0053a1;
+    --background-app: #4978A4;
+}
+
+body {
+    background-color: var(--background-body);
+    overflow-x: hidden;
+}
+
+
+/* --------------------------- */
+input {
+    width: 100%;
+}
+
+.input-menor {
+    width: auto;
+}
+
+hr {
+    margin: 20px 0 10px;
+    height: 2px;
+    border: 1px solid #003e7793;
+}

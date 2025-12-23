@@ -11,13 +11,11 @@ footer {
 footer button {
     flex: 1;
     background-color: transparent;
+    color: white;
     border: 3px solid #003e7793;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-footer i {
-    color: white;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carros de interesse</title>
     <script src="https://kit.fontawesome.com/071c1a5cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/funcionalidades-gerais.css">
     <link rel="stylesheet" href="styles/cadastrar-carros.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -15,10 +16,11 @@
 </head>
 <body>
     <header>
-        <div class="background-title">
+        <div class="header-conteudo">
             <h1>Carros de interesse</h1>
         </div>
     </header>
+    
 
     <main>
         <section id="cadastrar-carros">
@@ -64,16 +66,16 @@
                             <br>
                             <input type="number" name="preco" id="ipreco" required>
                         </div>
-                        <div class="campo-radio">
-                            <p><strong>Donos:</strong></p>
-                            <div class="input-label-qtd-donos">
-                                <input type="radio" name="qtd-donos" id="iunico-dono" class="input-menor">
-                                <label for="iunico-dono">Único dono</label>
-                            </div>
-                            <div class="input-label-qtd-donos">
-                                <input type="radio" name="qtd-donos" id="i-mais-de-um-dono" class="input-menor">
-                                <label for="imais-de-um-dono">Mais de um dono</label>
-                            </div>
+                    </div>
+                    <div class="campo-radio">
+                        <p><strong>Donos:</strong></p>
+                        <div class="input-label-qtd-donos">
+                            <input type="radio" name="qtd-donos" id="iunico-dono" class="input-menor">
+                            <label for="iunico-dono">Único dono</label>
+                        </div>
+                        <div class="input-label-qtd-donos">
+                            <input type="radio" name="qtd-donos" id="i-mais-de-um-dono" class="input-menor">
+                            <label for="imais-de-um-dono">Mais de um dono</label>
                         </div>
                     </div>
                 </div>
@@ -116,39 +118,39 @@
                 <h2>Filtrar carros</h2>
                 <div class="filtrar-carros-title-botoes">
                     <button onclick="localStorageParaHTML()">Mostrar todos</button>
-                    <button id="btn-abrir-filtros">Filtros <i class="fa-solid fa-angle-down"></i></button>
-                    
+                    <button id="btn-abrir-filtros" onclick="abrirFecharFiltro()">Filtros <i class="fa-solid fa-angle-down"></i></button>       
                 </div>
             </div>
             <hr>
-            <div id="lista-carros-filtrados">
-                <div id="filtros">
-                    <button id="btn-fechar-filtros">
-                        <i class="fa-solid fa-x"></i>
-                    </button>
-                    <label>Marca: <input type="text" name="filtro-marca" id="ifiltro-marca"></label>
-                    <label>Modelo: <input type="text" name="filtro-modelo" id="ifiltro-modelo"></label>
-                    <label>Tipo: <input type="text" name="filtro-tipo" id="ifiltro-tipo"></label>
-                    <label>Cor: <input type="text" name="filtro-cor" id="ifiltro-cor"></label>
-                    <label>Quilometragem máxima: <input type="text" name="filtro-km-max" id="ifiltro-km-max"></label>
-                    <label>Preço máximo: <input type="text" name="filtro-preco-max" id="ifiltro-preco-max"></label>
-                    <label>Loja: <input type="text" name="filtro-loja" id="ifiltro-loja"></label>
-                    <div style="margin-top: 10px;">
-                        <div class="radio-inline">
-                            <input type="radio" name="filtro-donos" id="ifiltro-indiferente-donos" checked>
-                            <label for="ifiltro-indiferente-donos">Escolha indiferente</label>
-                        </div>
-                        <div class="radio-inline">
-                            <input type="radio" name="filtro-donos" id="ifiltro-unico-dono">
-                            <label for="ifiltro-unico-dono">Único dono</label>
-                        </div>
-                        <div class="radio-inline">
-                            <input type="radio" name="filtro-donos" id="ifiltro-mais-de-um-dono">
-                            <label for="ifiltro-mais-de-um-dono">Mais de um dono</label>
-                        </div>
+            <div id="filtros">
+                <button id="btn-fechar-filtros" onclick="abrirFecharFiltro()">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <label>Marca: <input type="text" name="filtro-marca" id="ifiltro-marca"></label>
+                <label>Modelo: <input type="text" name="filtro-modelo" id="ifiltro-modelo"></label>
+                <label>Tipo: <input type="text" name="filtro-tipo" id="ifiltro-tipo"></label>
+                <label>Cor: <input type="text" name="filtro-cor" id="ifiltro-cor"></label>
+                <label>Quilometragem máxima: <input type="text" name="filtro-km-max" id="ifiltro-km-max"></label>
+                <label>Preço máximo: <input type="text" name="filtro-preco-max" id="ifiltro-preco-max"></label>
+                <label>Loja: <input type="text" name="filtro-loja" id="ifiltro-loja"></label>
+                <div style="margin-top: 10px;">
+                    <div class="radio-inline">
+                        <input type="radio" name="filtro-donos" id="ifiltro-indiferente-donos" checked>
+                        <label for="ifiltro-indiferente-donos">Escolha indiferente</label>
                     </div>
-                    <button>Filtrar</button>
+                    <div class="radio-inline">
+                        <input type="radio" name="filtro-donos" id="ifiltro-unico-dono">
+                        <label for="ifiltro-unico-dono">Único dono</label>
+                    </div>
+                    <div class="radio-inline">
+                        <input type="radio" name="filtro-donos" id="ifiltro-mais-de-um-dono">
+                        <label for="ifiltro-mais-de-um-dono">Mais de um dono</label>
+                    </div>
                 </div>
+                <button>Filtrar</button>
+            </div>
+            <div id="lista-carros-filtrados">
+                
             </div>
         </section>
     </main>

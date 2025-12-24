@@ -125,9 +125,11 @@
             </div>
             <hr>
             <div id="filtros">
-                <button id="btn-fechar-filtros" onclick="abrirFecharFiltro()">
-                    <i class="fa-solid fa-x"></i>
-                </button>
+                <div id="div-fechar-filtros">
+                    <button id="btn-fechar-filtros" onclick="abrirFecharFiltro()">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
                 <label>Marca: <input type="text" name="filtro-marca" id="ifiltro-marca"></label>
                 <label>Modelo: <input type="text" name="filtro-modelo" id="ifiltro-modelo"></label>
                 <label>Tipo: <input type="text" name="filtro-tipo" id="ifiltro-tipo"></label>
@@ -157,7 +159,7 @@
 
         <section id="modificar-informacoes-carros">
             <div class="modificar-informacoes-carros-titulo">
-                <h2>Modificar informações</h2>
+                <h2>Excluir carros</h2>
                 <div class="input-lupa">
                     <input type="text" name="buscar-carro" id="ibuscar-carro" placeholder="nome do carro">
                     <label for="ibuscar-carro">

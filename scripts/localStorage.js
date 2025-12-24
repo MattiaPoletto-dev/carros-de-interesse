@@ -8,6 +8,7 @@ salvarCarro();
 
 function salvarCarro() {
   const carro = {
+    id: Date.now(),
     loja: document.querySelector("#inome-da-loja").value,
     marca: document.querySelector("#imarca").value,
     modelo: document.querySelector("#imodelo").value,
@@ -100,7 +101,7 @@ function localStorageParaModificarInformacoes() {
     card.innerHTML = `
       <div class="carro-filtrado-para-modificar">
         <p class="primeiro-paragrafo-modificacao">
-          <button class="x-para-excluir-carro">
+          <button class="x-para-excluir-carro" data-id="${carro.id}">
             <i class="fa-solid fa-x"></i>
           </button>
         </p>
@@ -111,5 +112,30 @@ function localStorageParaModificarInformacoes() {
     `;
 
     lista.appendChild(card);
+
+  
   })
+
+
+  document.querySelectorAll(".x-para-excluir-carro").forEach(botao => {
+    botao.addEventListener("click", function () {
+      const id = Number(this.dataset.id);
+      excluirCarro(id);
+    });
+  });
+
+}
+
+function excluirCarro(id) {
+  const confirmar = confirm("Tem certeza que deseja excluir este carro?");
+  if (!confirmar) return;
+
+  const dados = localStorage.getItem("carros");
+  const carros = dados ? JSON.parse(dados) : [];
+
+  const carrosAtualizados = carros.filter(carro => carro.id !== id);
+
+  localStorage.setItem("carros", JSON.stringify(carrosAtualizados));
+
+  localStorageParaModificarInformacoes();
 }

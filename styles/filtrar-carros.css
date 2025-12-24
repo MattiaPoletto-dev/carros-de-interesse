@@ -73,6 +73,20 @@
     align-self: flex-end;
 }
 
+#div-fechar-filtros {
+    position: sticky;
+    top: 0; left: 0;
+    width: 100%;
+    height: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-fechar-filtros {
+    width: 22px;
+}
+
 .radio-inline {
     display: flex;
     justify-content: flex-start;
@@ -81,10 +95,6 @@
 
 .radio-inline input {
     width: 20%;
-}
-
-#filtros {
-  display: none;
 }
 
 #filtros.aberto {
